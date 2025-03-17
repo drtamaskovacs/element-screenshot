@@ -49,8 +49,7 @@ try:
     expand_element = driver.find_element(By.XPATH, "//p[contains(text(), '| Globs:')]")
     button_element = expand_element.find_element(By.XPATH, "./ancestor::button")
     aria_expanded_value = button_element.get_attribute("aria-expanded")
-    print(aria_expanded_value)
-
+    
     if aria_expanded_value=='false':
         button_element.click()
         time.sleep(1)  # Várunk, hogy a tartalom betöltődjön
@@ -59,8 +58,7 @@ try:
     expand_element = driver.find_element(By.XPATH, "//p[text()='Optional fields']")
     button_element = expand_element.find_element(By.XPATH, "./ancestor::button")
     aria_expanded_value = button_element.get_attribute("aria-expanded")
-    print(aria_expanded_value)
-
+    
     if aria_expanded_value=='false':
         button_element.click()
         time.sleep(1)  # Várunk, hogy a tartalom betöltődjön
@@ -69,8 +67,7 @@ try:
     expand_element = driver.find_elements(By.XPATH, "//p[text()='Optional fields']")
     button_element = expand_element[2].find_element(By.XPATH, "./ancestor::button")
     aria_expanded_value = button_element.get_attribute("aria-expanded")
-    print(aria_expanded_value)
-
+    
     if aria_expanded_value=='false':
         button_element.click()
         time.sleep(1)  # Várunk, hogy a tartalom betöltődjön
